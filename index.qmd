@@ -1,0 +1,159 @@
+---
+title: "PENGARUH PERDAGANGAN INTERNASIONAL TERHADAP PEREKONOMIAN INDONESIA DALAM KURUN WAKTU 10 TAHUN (2014-2023)"
+subtitle: "Metode Penelitian Politeknik APP Jakarta"
+author: "Fazila Harnisa Putri (230204653)"
+date: 2025-01-04
+number-sections: true
+format:
+  html: default
+  docx: default
+---
+
+
+![Politeknik APP Jakarta](poltekapp.jpg)
+
+
+## Pendahuluan
+
+### Latar Belakang
+
+Perkembangan ekonomi suatu negara saat ini sangat dipengaruhi oleh kondisi perekonomian global. Globalisasi telah menjadi tantangan bagi hampir seluruh negara di dunia, mendorong mereka untuk semakin membuka diri terhadap ekonomi global (Nurani & Bagio, 2019). Salah satu faktor yang berperan penting dalam mendorong pertumbuhan ekonomi suatu negara adalah perdagangan internasional, yang mencakup aktivitas ekspor dan impor. Ekspor dan impor memiliki kontribusi signifikan terhadap pertumbuhan ekonomi, baik di negara maju maupun berkembang, di mana pertumbuhan ekonomi menjadi indikator utama kesejahteraan ekonomi.
+
+Perdagangan internasional tidak hanya terbatas pada ekspor dan impor barang, tetapi juga melibatkan jasa serta perdagangan modal. Salah satu keunggulan perdagangan internasional adalah memungkinkan negara untuk fokus pada produksi barang dan jasa yang lebih efisien dan berbiaya rendah. Selain itu, manfaat nyata dari perdagangan internasional meliputi peningkatan pendapatan negara, tambahan cadangan devisa, aliran modal yang lebih besar, serta terbukanya lebih banyak peluang kerja. Dengan adanya perdagangan internasional, produk-produk domestik tidak hanya dipasarkan di dalam negeri tetapi juga di luar negeri, yang pada akhirnya mendorong peningkatan pendapatan nasional. Berdasarkan paparan tersebut, penelitian ini bertujuan untuk menganalisis pengaruh perdagangan internasional terhadap pertumbuhan ekonomi Indonesia.
+
+### Ruang Lingkup
+
+Data Ekpor dan tingkat perekonomian di Indonesia pada periode 2014 hingga 2023 digunakan sebagai dasar analisis dalam penelitian ini. Sumber data diperoleh dari Badan Pusat Statistik (BPS) atau lembaga terpercaya lainnya. Penelitian ini menggunakan analisis regresi linier untuk mengevaluasi secara mendalam pengaruh ekspor terhadap perekonimian di indonesia.
+
+### Rumusan Masalah
+
+Berdasarkan uraian latar belakang masalah diatas, maka terdapat beberapa indikator yang menjadi rumusan masalah dalam penelitian ini. Adapun rumusan masalah tersebut adalah
+
+1. Apakah Ekspor berpengaruh terhadap perekonomian di Indonesia selama 10 tahun terakhir ?
+2. Seberapa besar kontribusi ekspor terhadap Produk Domestik Bruto (PDB) Indonesia dalam kurun waktu 2014-2023?
+
+### Tujuan Penelitian 
+
+Penelitian ini bertujuan untuk mengetahui besarnya pengaruh ekspor dan impor terhadap pertumbuhan ekonomi Indonesia dan untuk menentukan strategi peningkatan nilai ekspor Indonesia.
+
+### Manfaat Penelitian
+
+Penelitian ini diharapkan menjadi sumber informasi yang relevan dan bermanfaat bagi pemerintah dalam menentukan peraturan kepada pihak – pihak yang akan melakukan ekspor agar mempermudah pelaku eksportir dalam melakukan kegiatan  ekspor.
+
+### Package
+
+Packages yang digunakan sebagai berikut:
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(WDI)
+```
+
+## Studi Pustaka
+
+### Perdagangan Internasional 
+
+Perdagangan internasional adalah aktivitas jual beli yang terjadi antara penduduk dari dua negara atau lebih berdasarkan kesepakatan bersama. Penduduk yang terlibat dapat berupa individu dengan individu, individu dengan pemerintah suatu negara, atau antara pemerintah dari dua negara. 
+
+### Ekspor 
+
+Ekspor merupakan salah satu kegiatan perdagangan jual beli barang atau jasa yang dilaksanakan secara terus menerus untuk memperoleh keuntungan dengan melintasi daerah kepabeanan Indonesia berdasarkan ketentuan yang berlaku (BPEN.2003:1). Berdasarkan UU Kepabeanan No. 17 tahun 2006 pengertian ekspor adalah mengeluarkan barang dari wilayah pabean Indonesia untuk dikirimkan keluar negeri. 
+
+Menurut Tandjung (2011) terdapat dua kategori ekspor :
+
+1. Ekspor Freehand adalah pelanggan yang diperoleh atau diperkenalkan oleh departemen penjualan dan pemasaran dengan mengunjungi beberapa pelanggan yang akan melakukan ekspor secara langsung melalui beberapa pameran.
+
+2. Ekspor Nominasi adalah pelanggan yang diperoleh atau didapatkan oleh agen internasional berdasarkan perjanjian kerjasama antara perusahaan freight forwarder. (Mandasari, et al, 2021).
+
+### Pertumbuhan Ekonomi 
+
+Menurut Sukirno (2010), pertumbuhan ekonomi merujuk pada peningkatan aktivitas ekonomi yang menghasilkan bertambahnya barang dan jasa yang diproduksi oleh masyarakat. Mankiw (2008) menyebutkan bahwa pertumbuhan ekonomi dapat diartikan sebagai kenaikan PDB riil suatu negara dalam periode tertentu, yang mencerminkan peningkatan pendapatan per kapita. Sementara itu, Afandi (2014) mendefinisikan pertumbuhan ekonomi sebagai peningkatan total output dalam jangka panjang, terlepas dari apakah peningkatan tersebut lebih besar atau lebih kecil dibandingkan pertumbuhan penduduk, serta apakah diiringi perubahan struktur ekonomi atau tidak.
+
+## Metode Penelitian
+
+### Data
+
+| Tahun |   Nilai Ekspor   |  PDB INDONESIA |
+|-------|------------------|----------------|
+| 2014  |     176036194    |    8564866,6   |
+| 2015  |     150282258    |    8982517,1   |
+| 2016  |     144494206    |    9434613,4   |
+| 2017  |     168810637    |    9912928,1   |
+| 2018  |     180215036    |   10425851,9   |
+| 2019  |     167682996    |   10949155,4   |
+| 2020  |     163306490    |   10722999,3   |
+| 2021  |     231587887    |   11120077,9   |
+| 2022  |     291979103    |   11710397,8   |
+| 2023  |     258797196    |   12301393,6   |
+
+Sumber :
+Nilai Ekspor (ITC Trade Map)
+PDB INDONESIA (KEMENDAG)
+
+### Metode analisis
+
+Penelitian ini menerapkan metode analisis regresi linier berganda (multiple regression analysis) dengan pendekatan kuantitatif dan deskriptif. Pendekatan kuantitatif dilakukan melalui analisis berbasis angka untuk mengkaji faktor-faktor yang memengaruhi perdagangan internasional serta dampaknya terhadap perekonomian di Indonesia. Sementara itu, metode deskriptif digunakan untuk memberikan gambaran yang sistematis dan faktual mengenai perkembangan setiap variabel serta kondisi ekonomi secara umum.
+
+Dalam analisis kuantitatif, penelitian ini melibatkan proses penghitungan dan pengukuran untuk mengetahui pengaruh perdagangan internasional terhadapat perekonomian di Indonesia. Metode regresi linier berganda digunakan untuk menganalisis hubungan antara variabel independen (faktor-faktor yang memengaruhi) dan variabel dependen (perekonomian), serta mengukur sejauh mana masing-masing faktor berkontribusi terhadap variasi dalam tingkat perekonomian.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+Pada bagian ini dapat ditampilkan data yang telah dikumpulkan :
+```{r}
+setwd('C:/Metopel/Fazila Harnisa Putri')
+read_excel("data metopel.xlsx")
+```
+Diketahui :
+X = Nilai Ekspor
+Y = PDB INDONESIA
+
+```{r}
+dat<-read_excel('data metopel.xlsx')
+library(ggplot2)
+ggplot(data=dat, aes(x=X, y=Y))+
+  geom_point(color='blue', size=2)+
+  labs(title="Plot Terhadap PDB INDONESIA",
+       x="Nilai Ekspor",
+       y="PDB INDONESIA",
+       caption = "Sumber:  Trade Map & KEMENDAG") +
+  theme_classic()
+```
+
+### Analisis masalah
+
+Hasil pengaruh nilai ekspor terhadap PDB Indonesia  diestimasi menggunakan regresi univariat. Hasilnya ditunjukkan sebagai berikut:
+
+```{r}
+library("readxl")
+dat<-read_excel("data metopel.xlsx")
+reg<-lm(Y~X,data=dat)
+summary(reg)
+```
+
+Analisis ini menggunakan metode OLS dalam model regresi multivariat untuk mengevaluasi hubungan antara variabel dependen dan independen. Dalam studi ini, variabel dependen yang dianalisis adalah PDB Indonesia, sedangkan variabel independennya adalah Nilai Ekspor. Hasil regresi menunjukkan bahwa jumlah ekspor berdampak positif terhadap pertumbuhan ekonomi. Namun, analisis juga mengungkapkan bahwa Nilai Ekspor memiliki pengaruh negatif terhadap pertumbuhan ekonomi.
+
+Ketika jumlah ekspor meningkat sebesar 1 persen, PDB Indonesia akan mengalami peningkatan sebesar 1,830e-02. Sebaliknya, jika jumlah ekspor menurun sebesar 1 persen, PDB Indonesia akan berkurang sebesar 1,830e-02. Hal ini konsisten dengan teori perdagangan internasional, yang menyatakan bahwa peningkatan jumlah barang atau jasa yang diekspor ke luar negeri mendorong peningkatan produksi barang dan jasa di dalam negeri.
+
+## Kesimpulan
+
+Berdasarkan hasil penelitian ini, dapat disimpulkan bahwa Nilai Ekspor memiliki pengaruh signifikan terhadap pertumbuhan ekonomi Indonesia. Temuan ini sejalan dengan teori perdagangan internasional, di mana peningkatan ekspor menunjukkan adanya kenaikan permintaan barang atau jasa dari negara lain. Kondisi tersebut mendorong peningkatan produksi barang dan jasa di dalam negeri. Untuk mendukung kelancaran roda perekonomian, peningkatan produksi dalam negeri menjadi hal yang penting, karena pada akhirnya hal tersebut akan berkontribusi pada pertumbuhan ekonomi Indonesia. 
+
+## Referensi
+
+Fitriani, E. (2019). Analisis pengaruh perdagangan internasional terhadap pertumbuhan ekonomi indonesia. JURISMA: Jurnal Riset Bisnis & Manajemen, 9(1), 17-26.
+
+ITC Trade Map. (2023). List of products exported by Indonesia, from https://www.trademap.org/
+
+Manik, M. (2022). Pengaruh Perdagangan Internasional Terhadap Pertumbuhan Ekonomi Indonesia. E-Mabis: Jurnal Ekonomi Manajemen dan Bisnis, 23(2), 13-20.
+
+Satu Data Perdagangan. (2023). Produk Domestik Bruto (PDB), from https://satudata.kemendag.go.id/data-informasi/perdagangan-dalam-negeri/produk-domestik-bruto
+	
+Syofya, H. (2017). Analisis Dampak Perdagangan Internasional Terhadap Pembangunan Ekonomi. Jurnal Akuntansi dan Ekonomika, 7(1), 72-80.	
+
+Undang-Undang Kepabeanan No. 17 tahun 2006 Tentang Pengertian Ekspor
+
+Yuni, R., & Hutabarat, D. L. (2021). Dampak Perdagangan Internasional Terhadap Pertumbuhan Ekonomi Indonesia Pada Tahun 2009-2019. Niagawan, 10(1), 62.
+
