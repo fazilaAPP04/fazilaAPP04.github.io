@@ -133,7 +133,7 @@ reg<-lm(Y~X,data=dat)
 summary(reg)
 ```
 
-Analisis ini menggunakan metode OLS dalam model regresi multivariat untuk mengevaluasi hubungan antara variabel dependen dan independen. Dalam studi ini, variabel dependen yang dianalisis adalah PDB Indonesia, sedangkan variabel independennya adalah Nilai Ekspor. Hasil regresi menunjukkan bahwa jumlah ekspor berdampak positif terhadap pertumbuhan ekonomi. Namun, analisis juga mengungkapkan bahwa Nilai Ekspor memiliki pengaruh negatif terhadap pertumbuhan ekonomi.
+Analisis ini menggunakan metode OLS dalam model regresi univariat untuk mengevaluasi hubungan antara variabel dependen dan independen. Dalam studi ini, variabel dependen yang dianalisis adalah PDB Indonesia, sedangkan variabel independennya adalah Nilai Ekspor. Hasil regresi menunjukkan bahwa jumlah ekspor berdampak positif terhadap pertumbuhan ekonomi. Namun, analisis juga mengungkapkan bahwa Nilai Ekspor memiliki pengaruh negatif terhadap pertumbuhan ekonomi.
 
 Ketika jumlah ekspor meningkat sebesar 1 persen, PDB Indonesia akan mengalami peningkatan sebesar 1,830e-02. Sebaliknya, jika jumlah ekspor menurun sebesar 1 persen, PDB Indonesia akan berkurang sebesar 1,830e-02. Hal ini konsisten dengan teori perdagangan internasional, yang menyatakan bahwa peningkatan jumlah barang atau jasa yang diekspor ke luar negeri mendorong peningkatan produksi barang dan jasa di dalam negeri.
 
